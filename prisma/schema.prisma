@@ -1,12 +1,12 @@
 // DB設計ドリルの初期スキーマ（ドリル1: TODO）。
 // ここを書き換えて `npm run db:migrate` するのが練習の基本ループ。
 generator client {
-  provider = "prisma-client-js"
+  provider = "prisma-client" // Prisma 7 の新ジェネレータ（Rust不要）
+  output   = "../src/generated/prisma" // 生成先（node_modules外）。要 prisma generate
 }
 
 datasource db {
   provider = "postgresql"
-  url      = env("DATABASE_URL")
 }
 
 model User {

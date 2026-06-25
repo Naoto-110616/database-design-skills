@@ -6,3 +6,6 @@ node_modules
 *.log
 .DS_Store
 next-env.d.ts
+
+# Prisma 7: 生成クライアント（コミット不要。clone後は prisma generate で再生成）
+/src/generated
